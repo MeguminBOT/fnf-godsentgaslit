@@ -1345,7 +1345,7 @@ class FunkinLua {
 			}
 			return false;
 		});
-		Lua_helper.add_callback(lua, "startVideo", function(videoFile:String, ?canSkip:Bool = true) {
+		Lua_helper.add_callback(lua, "startVideo", function(videoFile:String, ?midSong:Bool = false, ?canSkip:Bool = true) {
 			#if VIDEOS_ALLOWED
 			if(FileSystem.exists(Paths.video(videoFile)))
 			{
@@ -1354,7 +1354,7 @@ class FunkinLua {
 					game.remove(game.videoCutscene);
 					game.videoCutscene.destroy();
 				}
-				game.videoCutscene = game.startVideo(videoFile, false, canSkip);
+				game.videoCutscene = game.startVideo(videoFile, midSong, canSkip);
 				return true;
 			}
 			else

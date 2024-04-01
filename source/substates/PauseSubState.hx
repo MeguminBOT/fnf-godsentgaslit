@@ -8,8 +8,7 @@ import flixel.addons.transition.FlxTransitionableState;
 
 import flixel.util.FlxStringUtil;
 
-import states.StoryMenuState;
-import states.FreeplayState;
+import states.MainMenuState;
 import options.OptionsState;
 
 class PauseSubState extends MusicBeatSubstate
@@ -31,6 +30,8 @@ class PauseSubState extends MusicBeatSubstate
 	var missingText:FlxText;
 
 	public static var songName:String = null;
+
+	var pauseMenuChar:FlxSprite;
 
 	override function create()
 	{
@@ -77,6 +78,12 @@ class PauseSubState extends MusicBeatSubstate
 		bg.alpha = 0;
 		bg.scrollFactor.set();
 		add(bg);
+
+		var tweenOffset:Float = 3000;
+		pauseMenuChar = new FlxSprite(tweenOffset + 0, 0);
+		pauseMenuChar.loadGraphic(Paths.image('pause'));
+		pauseMenuChar.antialiasing = ClientPrefs.data.antialiasing;
+		add(pauseMenuChar);
 
 		var levelInfo:FlxText = new FlxText(20, 15, 0, PlayState.SONG.song, 32);
 		levelInfo.scrollFactor.set();
@@ -125,6 +132,7 @@ class PauseSubState extends MusicBeatSubstate
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(levelDifficulty, {alpha: 1, y: levelDifficulty.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.5});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
+		FlxTween.tween(pauseMenuChar, {alpha: 1, x: pauseMenuChar.x - tweenOffset}, 1, {ease: FlxEase.quartInOut});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
@@ -144,6 +152,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		regenMenu();
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+
 
 		super.create();
 	}
@@ -311,10 +320,7 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.seenCutscene = false;
 
 					Mods.loadTopMod();
-					if(PlayState.isStoryMode)
-						MusicBeatState.switchState(new StoryMenuState());
-					else 
-						MusicBeatState.switchState(new FreeplayState());
+					MusicBeatState.switchState(new MainMenuState());
 
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					PlayState.changedDifficulty = false;

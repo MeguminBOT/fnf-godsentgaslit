@@ -122,7 +122,7 @@ class TitleState extends MusicBeatState
 	function startIntro()
 	{
 		if (!initialized && FlxG.sound.music == null)
-			FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
+			FlxG.sound.playMusic(Paths.music('gaslitMenu'), 0.5);
 
 		Conductor.bpm = 100;
 		persistentUpdate = true;

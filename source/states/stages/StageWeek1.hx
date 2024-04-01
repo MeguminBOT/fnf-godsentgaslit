@@ -7,7 +7,7 @@ class StageWeek1 extends BaseStage
 {
 	var dadbattleBlack:BGSprite;
 	var dadbattleLight:BGSprite;
-	var dadbattleFog:DadBattleFog;
+	// var dadbattleFog:DadBattleFog;
 	override function create()
 	{
 		var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
@@ -51,9 +51,9 @@ class StageWeek1 extends BaseStage
 				dadbattleLight.visible = false;
 				add(dadbattleLight);
 
-				dadbattleFog = new DadBattleFog();
-				dadbattleFog.visible = false;
-				add(dadbattleFog);
+				// dadbattleFog = new DadBattleFog();
+				// dadbattleFog.visible = false;
+				// add(dadbattleFog);
 		}
 	}
 
@@ -72,7 +72,7 @@ class StageWeek1 extends BaseStage
 						{
 							dadbattleBlack.visible = true;
 							dadbattleLight.visible = true;
-							dadbattleFog.visible = true;
+							// dadbattleFog.visible = true;
 							defaultCamZoom += 0.12;
 						}
 
@@ -84,13 +84,13 @@ class StageWeek1 extends BaseStage
 							dadbattleLight.alpha = 0.375;
 						});
 						dadbattleLight.setPosition(who.getGraphicMidpoint().x - dadbattleLight.width / 2, who.y + who.height - dadbattleLight.height + 50);
-						FlxTween.tween(dadbattleFog, {alpha: 0.7}, 1.5, {ease: FlxEase.quadInOut});
+						// FlxTween.tween(dadbattleFog, {alpha: 0.7}, 1.5, {ease: FlxEase.quadInOut});
 
 					default:
 						dadbattleBlack.visible = false;
 						dadbattleLight.visible = false;
 						defaultCamZoom -= 0.12;
-						FlxTween.tween(dadbattleFog, {alpha: 0}, 0.7, {onComplete: function(twn:FlxTween) dadbattleFog.visible = false});
+						// FlxTween.tween(dadbattleFog, {alpha: 0}, 0.7, {onComplete: function(twn:FlxTween) dadbattleFog.visible = false});
 				}
 		}
 	}
