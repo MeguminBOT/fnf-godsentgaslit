@@ -1,0 +1,15 @@
+{
+	"songs": [
+		["Bedtime", "dad", [128, 128, 128]]
+	],
+	"difficulties": "Normal",
+	"storyName": "Week WIP",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"hideFreeplay": false,
+	"freeplayColor": [128, 128, 128],
+	"weekBefore": "week7",
+	"weekName": "weekwip",
+	"weekBackground": "stage",
+	"weekCharacters": ["BF", "BF", "BF"]
+}

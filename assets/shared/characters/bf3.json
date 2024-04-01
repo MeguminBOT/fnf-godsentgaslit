@@ -1,0 +1,80 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BF idle dance"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BF Sing Note LEFT"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BF Sing Note DOWN"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BF Sing Note UP"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BF Sing Note RIGHT"
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf3",
+	"position": [
+		-740,
+		700
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		76,
+		201,
+		255
+	],
+	"camera_position": [
+		-290,
+		100
+	],
+	"sing_duration": 5.99999999999999,
+	"scale": 0.5,
+	"_editor_isPlayer": true
+}
