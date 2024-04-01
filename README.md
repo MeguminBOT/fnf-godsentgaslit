@@ -1,6 +1,6 @@
 # Official source code of Godsent Gaslit (Bedtime).
 
-Mod is running on a modified Psych Engine 0.7.3 version (Experimental branch).
+Mod is running on Psych Engine 0.7.3 version (Experimental branch).
 Source released to comply with the open source requirement 
 
 (PORTS OF GODSENT GASLIT ARE ALSO REQUIRED TO BE OPENSOURCED, SINCE PEOPLE APPARENTLY DONT UNDERSTAND THIS, I WILL SADLY HAVE TO TAKE MEASURES AGAINST THOSE WHO DON'T RELEASE THEIR PORTS SOURCE)
